@@ -12,9 +12,11 @@
 		686BFA2B22000C1900F494F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686BFA2922000C1900F494F4 /* Main.storyboard */; };
 		686BFA2D22000C1A00F494F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 686BFA2C22000C1A00F494F4 /* Assets.xcassets */; };
 		686BFA3022000C1A00F494F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686BFA2E22000C1A00F494F4 /* LaunchScreen.storyboard */; };
+		9240086691A97AE0FD365830 /* Pods_OpenCV_Playground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A358342CBC48460D2D9A4917 /* Pods_OpenCV_Playground.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3191FF046A71B871DBA20630 /* Pods-OpenCV-Playground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenCV-Playground.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenCV-Playground/Pods-OpenCV-Playground.release.xcconfig"; sourceTree = "<group>"; };
 		686BFA2222000C1900F494F4 /* OpenCV-Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenCV-Playground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		686BFA2522000C1900F494F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		686BFA2722000C1900F494F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		686BFA2C22000C1A00F494F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		686BFA2F22000C1A00F494F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		686BFA3122000C1A00F494F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82D24E5B0CA1C650AD4736D3 /* Pods-OpenCV-Playground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenCV-Playground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenCV-Playground/Pods-OpenCV-Playground.debug.xcconfig"; sourceTree = "<group>"; };
+		A358342CBC48460D2D9A4917 /* Pods_OpenCV_Playground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenCV_Playground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9240086691A97AE0FD365830 /* Pods_OpenCV_Playground.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				686BFA2422000C1900F494F4 /* OpenCV-Playground */,
 				686BFA2322000C1900F494F4 /* Products */,
+				DD46C83547A4458AEC1FAF2B /* Pods */,
+				8A58436A7A8ABA71644D53C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = "OpenCV-Playground";
 			sourceTree = "<group>";
 		};
+		8A58436A7A8ABA71644D53C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A358342CBC48460D2D9A4917 /* Pods_OpenCV_Playground.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD46C83547A4458AEC1FAF2B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82D24E5B0CA1C650AD4736D3 /* Pods-OpenCV-Playground.debug.xcconfig */,
+				3191FF046A71B871DBA20630 /* Pods-OpenCV-Playground.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +95,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 686BFA3422000C1A00F494F4 /* Build configuration list for PBXNativeTarget "OpenCV-Playground" */;
 			buildPhases = (
+				4937B0F34FF862EE8B062C1C /* [CP] Check Pods Manifest.lock */,
 				686BFA1E22000C1900F494F4 /* Sources */,
 				686BFA1F22000C1900F494F4 /* Frameworks */,
 				686BFA2022000C1900F494F4 /* Resources */,
@@ -129,6 +154,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4937B0F34FF862EE8B062C1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OpenCV-Playground-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		686BFA1E22000C1900F494F4 /* Sources */ = {
@@ -280,6 +330,7 @@
 		};
 		686BFA3522000C1A00F494F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82D24E5B0CA1C650AD4736D3 /* Pods-OpenCV-Playground.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +349,7 @@
 		};
 		686BFA3622000C1A00F494F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3191FF046A71B871DBA20630 /* Pods-OpenCV-Playground.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
