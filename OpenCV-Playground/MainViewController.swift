@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,9 +16,32 @@ class MainViewController: UIViewController {
     }
 
     @IBAction func selectPhoto(_ sender: UIButton) {
-
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = false
+        imagePicker.navigationBar.isHidden = false
+        imagePicker.modalPresentationStyle = .overCurrentContext
+        present(imagePicker, animated: true, completion: nil)
     }
 }
 
+extension MainViewController: UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        guard let image = info[.originalImage] as? UIImage else {
+            fatalError("picking imgage is invalid")
+        }
 
+        picker.dismiss(animated: true, completion: nil)
+        guard let vc = R.storyboard.previewView().instantiateInitialViewController() as? PreviewViewController else {
+            fatalError("previewView instantiation is failed")
+        }
+        vc.preview = image
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+}
 
