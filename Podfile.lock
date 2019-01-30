@@ -1,16 +1,24 @@
 PODS:
   - OpenCV (3.4.2)
+  - R.swift (5.0.2):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.0)
 
 DEPENDENCIES:
   - OpenCV (~> 3.4)
+  - R.swift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - OpenCV
+    - R.swift
+    - R.swift.Library
 
 SPEC CHECKSUMS:
   OpenCV: 452909747854c92e0f59670961ed5131f5286cb5
+  R.swift: 81455d81467763cbd3f4d79d938d05f4ac4c0228
+  R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
 
-PODFILE CHECKSUM: 2f14892074bb74e37bf2d15ae9cf2cbd108e1f1e
+PODFILE CHECKSUM: 66a48fe9e8f13a6182565287a5913099c9f8f284
 
 COCOAPODS: 1.5.3

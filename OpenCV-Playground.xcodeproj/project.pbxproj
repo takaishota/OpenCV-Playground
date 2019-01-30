@@ -13,6 +13,7 @@
 		686BFA2D22000C1A00F494F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 686BFA2C22000C1A00F494F4 /* Assets.xcassets */; };
 		686BFA3022000C1A00F494F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686BFA2E22000C1A00F494F4 /* LaunchScreen.storyboard */; };
 		686BFA602200221100F494F4 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 686BFA5F2200221100F494F4 /* OpenCVWrapper.mm */; };
+		687166A62201F47D00289D69 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687166A52201F47D00289D69 /* R.generated.swift */; };
 		9240086691A97AE0FD365830 /* Pods_OpenCV_Playground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A358342CBC48460D2D9A4917 /* Pods_OpenCV_Playground.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		686BFA5D2200221100F494F4 /* OpenCV-Playground-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenCV-Playground-Bridging-Header.h"; sourceTree = "<group>"; };
 		686BFA5E2200221100F494F4 /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
 		686BFA5F2200221100F494F4 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
+		687166A52201F47D00289D69 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		82D24E5B0CA1C650AD4736D3 /* Pods-OpenCV-Playground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenCV-Playground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenCV-Playground/Pods-OpenCV-Playground.debug.xcconfig"; sourceTree = "<group>"; };
 		A358342CBC48460D2D9A4917 /* Pods_OpenCV_Playground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenCV_Playground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -65,6 +67,7 @@
 		686BFA2422000C1900F494F4 /* OpenCV-Playground */ = {
 			isa = PBXGroup;
 			children = (
+				687166A52201F47D00289D69 /* R.generated.swift */,
 				686BFA5C220021BB00F494F4 /* OpenCVWrappers */,
 				686BFA2522000C1900F494F4 /* AppDelegate.swift */,
 				686BFA2722000C1900F494F4 /* ViewController.swift */,
@@ -111,9 +114,11 @@
 			buildConfigurationList = 686BFA3422000C1A00F494F4 /* Build configuration list for PBXNativeTarget "OpenCV-Playground" */;
 			buildPhases = (
 				4937B0F34FF862EE8B062C1C /* [CP] Check Pods Manifest.lock */,
+				687166A42201F26300289D69 /* ShellScript */,
 				686BFA1E22000C1900F494F4 /* Sources */,
 				686BFA1F22000C1900F494F4 /* Frameworks */,
 				686BFA2022000C1900F494F4 /* Resources */,
+				70A4FB7ABB85CC7C82805A80 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,6 +199,47 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		687166A42201F26300289D69 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/OpenCV-Playground/R.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/OpenCV-Playground/R.generated.swift\"\n";
+		};
+		70A4FB7ABB85CC7C82805A80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OpenCV-Playground/Pods-OpenCV-Playground-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenCV-Playground/Pods-OpenCV-Playground-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -203,6 +249,7 @@
 			files = (
 				686BFA2822000C1900F494F4 /* ViewController.swift in Sources */,
 				686BFA2622000C1900F494F4 /* AppDelegate.swift in Sources */,
+				687166A62201F47D00289D69 /* R.generated.swift in Sources */,
 				686BFA602200221100F494F4 /* OpenCVWrapper.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
