@@ -33,7 +33,7 @@ extension MainViewController: UIImagePickerControllerDelegate {
         }
 
         picker.dismiss(animated: true, completion: nil)
-        guard let vc = R.storyboard.previewView().instantiateInitialViewController() as? PreviewViewController else {
+        guard let vc = R.storyboard.preview().instantiateInitialViewController() as? PreviewViewController else {
             fatalError("previewView instantiation is failed")
         }
         vc.preview = image
