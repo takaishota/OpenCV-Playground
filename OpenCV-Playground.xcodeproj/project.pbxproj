@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		686BFA2622000C1900F494F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686BFA2522000C1900F494F4 /* AppDelegate.swift */; };
-		686BFA2822000C1900F494F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686BFA2722000C1900F494F4 /* ViewController.swift */; };
+		686BFA2822000C1900F494F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686BFA2722000C1900F494F4 /* MainViewController.swift */; };
 		686BFA2B22000C1900F494F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686BFA2922000C1900F494F4 /* Main.storyboard */; };
 		686BFA2D22000C1A00F494F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 686BFA2C22000C1A00F494F4 /* Assets.xcassets */; };
 		686BFA3022000C1A00F494F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686BFA2E22000C1A00F494F4 /* LaunchScreen.storyboard */; };
@@ -21,7 +21,7 @@
 		3191FF046A71B871DBA20630 /* Pods-OpenCV-Playground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenCV-Playground.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenCV-Playground/Pods-OpenCV-Playground.release.xcconfig"; sourceTree = "<group>"; };
 		686BFA2222000C1900F494F4 /* OpenCV-Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenCV-Playground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		686BFA2522000C1900F494F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		686BFA2722000C1900F494F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		686BFA2722000C1900F494F4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		686BFA2A22000C1900F494F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		686BFA2C22000C1A00F494F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		686BFA2F22000C1A00F494F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 				687166A52201F47D00289D69 /* R.generated.swift */,
 				686BFA5C220021BB00F494F4 /* OpenCVWrappers */,
 				686BFA2522000C1900F494F4 /* AppDelegate.swift */,
-				686BFA2722000C1900F494F4 /* ViewController.swift */,
+				686BFA2722000C1900F494F4 /* MainViewController.swift */,
 				686BFA2922000C1900F494F4 /* Main.storyboard */,
 				686BFA2C22000C1A00F494F4 /* Assets.xcassets */,
 				686BFA2E22000C1A00F494F4 /* LaunchScreen.storyboard */,
@@ -247,7 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				686BFA2822000C1900F494F4 /* ViewController.swift in Sources */,
+				686BFA2822000C1900F494F4 /* MainViewController.swift in Sources */,
 				686BFA2622000C1900F494F4 /* AppDelegate.swift in Sources */,
 				687166A62201F47D00289D69 /* R.generated.swift in Sources */,
 				686BFA602200221100F494F4 /* OpenCVWrapper.mm in Sources */,
