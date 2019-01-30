@@ -14,6 +14,8 @@
 		686BFA3022000C1A00F494F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686BFA2E22000C1A00F494F4 /* LaunchScreen.storyboard */; };
 		686BFA602200221100F494F4 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 686BFA5F2200221100F494F4 /* OpenCVWrapper.mm */; };
 		687166A62201F47D00289D69 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687166A52201F47D00289D69 /* R.generated.swift */; };
+		687166AA2201FA7600289D69 /* AppRootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687166A92201FA7600289D69 /* AppRootController.swift */; };
+		687166AC2201FABA00289D69 /* AppRoot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687166AB2201FABA00289D69 /* AppRoot.storyboard */; };
 		9240086691A97AE0FD365830 /* Pods_OpenCV_Playground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A358342CBC48460D2D9A4917 /* Pods_OpenCV_Playground.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,8 @@
 		686BFA5E2200221100F494F4 /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
 		686BFA5F2200221100F494F4 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
 		687166A52201F47D00289D69 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		687166A92201FA7600289D69 /* AppRootController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootController.swift; sourceTree = "<group>"; };
+		687166AB2201FABA00289D69 /* AppRoot.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AppRoot.storyboard; sourceTree = "<group>"; };
 		82D24E5B0CA1C650AD4736D3 /* Pods-OpenCV-Playground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenCV-Playground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenCV-Playground/Pods-OpenCV-Playground.debug.xcconfig"; sourceTree = "<group>"; };
 		A358342CBC48460D2D9A4917 /* Pods_OpenCV_Playground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenCV_Playground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -70,8 +74,10 @@
 				687166A52201F47D00289D69 /* R.generated.swift */,
 				686BFA5C220021BB00F494F4 /* OpenCVWrappers */,
 				686BFA2522000C1900F494F4 /* AppDelegate.swift */,
+				687166A92201FA7600289D69 /* AppRootController.swift */,
 				686BFA2722000C1900F494F4 /* MainViewController.swift */,
 				686BFA2922000C1900F494F4 /* Main.storyboard */,
+				687166AB2201FABA00289D69 /* AppRoot.storyboard */,
 				686BFA2C22000C1A00F494F4 /* Assets.xcassets */,
 				686BFA2E22000C1A00F494F4 /* LaunchScreen.storyboard */,
 				686BFA3122000C1A00F494F4 /* Info.plist */,
@@ -169,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				686BFA3022000C1A00F494F4 /* LaunchScreen.storyboard in Resources */,
+				687166AC2201FABA00289D69 /* AppRoot.storyboard in Resources */,
 				686BFA2D22000C1A00F494F4 /* Assets.xcassets in Resources */,
 				686BFA2B22000C1900F494F4 /* Main.storyboard in Resources */,
 			);
@@ -251,6 +258,7 @@
 				686BFA2622000C1900F494F4 /* AppDelegate.swift in Sources */,
 				687166A62201F47D00289D69 /* R.generated.swift in Sources */,
 				686BFA602200221100F494F4 /* OpenCVWrapper.mm in Sources */,
+				687166AA2201FA7600289D69 /* AppRootController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
