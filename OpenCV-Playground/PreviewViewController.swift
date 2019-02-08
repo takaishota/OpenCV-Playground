@@ -9,11 +9,30 @@
 import UIKit
 
 class PreviewViewController: UIViewController {
-    var preview: UIImage?
+    let openCV = OpenCVWrapper()
+    var originalImage: UIImage?
+    var preview: UIImage? {
+        didSet {
+            previewImageView.image = preview
+        }
+    }
+
     @IBOutlet weak var previewImageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        previewImageView.image = preview
+        preview = originalImage
+    }
+
+    @IBAction func mean(_ sender: UIButton) {
+        preview = openCV.mean(originalImage)
+    }
+
+    @IBAction func convertColor(_ sender: UIButton) {
+        preview = openCV.convertToGrayScale(with: originalImage)
+    }
+
+    @IBAction func setOriginal(_ sender: UIButton) {
+        preview = originalImage
     }
 }

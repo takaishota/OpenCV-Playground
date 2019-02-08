@@ -32,7 +32,6 @@ class AppRootController: UIViewController {
     private func setInitialViewController(_ viewController: UIViewController) {
         let nav = { () -> UINavigationController in
             let nav = UINavigationController(rootViewController: viewController)
-            nav.setNavigationBarHidden(true, animated: false)
             return nav
         }()
         addChild(nav)

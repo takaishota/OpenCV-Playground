@@ -10,17 +10,11 @@ import UIKit
 
 class MainViewController: UIViewController, UINavigationControllerDelegate {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
     @IBAction func selectPhoto(_ sender: UIButton) {
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
         imagePicker.delegate = self
         imagePicker.allowsEditing = false
-        imagePicker.navigationBar.isHidden = false
         imagePicker.modalPresentationStyle = .overCurrentContext
         present(imagePicker, animated: true, completion: nil)
     }
@@ -36,7 +30,7 @@ extension MainViewController: UIImagePickerControllerDelegate {
         guard let vc = R.storyboard.preview().instantiateInitialViewController() as? PreviewViewController else {
             fatalError("previewView instantiation is failed")
         }
-        vc.preview = image
+        vc.originalImage = image
         navigationController?.pushViewController(vc, animated: true)
     }
 
