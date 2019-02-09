@@ -32,8 +32,8 @@ class PreviewViewController: UIViewController {
         preview = openCV.convertToGrayScale(from: originalImage)
     }
 
-    @IBAction func threshold(_ sender: UIButton) {
-        preview = openCV.threshold(from: originalImage)
+    @IBAction func threshChanged(_ sender: UISlider) {
+        preview = openCV.threshold(from: originalImage, withThresh: Int(sender.value))
     }
 
     @IBAction func setOriginal(_ sender: UIButton) {
