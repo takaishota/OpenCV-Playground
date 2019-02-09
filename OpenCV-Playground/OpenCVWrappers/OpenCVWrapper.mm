@@ -11,23 +11,23 @@
 #import "OpenCVWrapper.h"
 
 @implementation OpenCVWrapper
--(NSString *) openCVVersionString {
+-(NSString *)openCVVersionString {
     return [NSString stringWithFormat: @"OpenCV Version %s", CV_VERSION];
 }
--(UIImage *)convertToGrayScaleWith: (UIImage*) image {
+-(UIImage *)convertToGrayScaleFrom:(UIImage*)image {
     cv::Mat convertedImage;
     UIImageToMat(image, convertedImage);
     cv::cvtColor(convertedImage, convertedImage, CV_BGR2GRAY);
     return MatToUIImage(convertedImage);
 }
--(UIImage *)mean: (UIImage *) image {
+-(UIImage *)meanFrom:(UIImage *)image {
     cv::Mat mat;
     UIImageToMat(image, mat);
     cv::Scalar scalar = cv::mean(mat);
     mat.setTo(scalar);
     return MatToUIImage(mat);
 }
--(UIImage *) threshold: (UIImage *) image {
+-(UIImage *)thresholdFrom:(UIImage *)image {
     cv::Mat grayImage;
     cv::Mat thresholdImage;
     UIImageToMat(image, grayImage);

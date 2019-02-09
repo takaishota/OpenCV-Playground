@@ -10,8 +10,8 @@
 #import <UIKit/UIKit.h>
 
 @interface OpenCVWrapper : NSObject
--(NSString *) openCVVersionString;
--(UIImage*) convertToGrayScaleWith:(UIImage *) image;
--(UIImage *) mean: (UIImage *) image;
--(UIImage *) threshold: (UIImage *) image;
+-(NSString *)openCVVersionString;
+-(UIImage*)convertToGrayScaleFrom:(UIImage *)image;
+-(UIImage *)meanFrom:(UIImage *)image;
+-(UIImage *)thresholdFrom:(UIImage *)image;
 @end

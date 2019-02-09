@@ -25,15 +25,15 @@ class PreviewViewController: UIViewController {
     }
 
     @IBAction func mean(_ sender: UIButton) {
-        preview = openCV.mean(originalImage)
+        preview = openCV.mean(from: originalImage)
     }
 
     @IBAction func convertColor(_ sender: UIButton) {
-        preview = openCV.convertToGrayScale(with: originalImage)
+        preview = openCV.convertToGrayScale(from: originalImage)
     }
 
     @IBAction func threshold(_ sender: UIButton) {
-        preview = openCV.threshold(originalImage)
+        preview = openCV.threshold(from: originalImage)
     }
 
     @IBAction func setOriginal(_ sender: UIButton) {
