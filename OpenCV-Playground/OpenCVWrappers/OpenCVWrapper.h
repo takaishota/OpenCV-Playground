@@ -13,4 +13,5 @@
 -(NSString *) openCVVersionString;
 -(UIImage*) convertToGrayScaleWith:(UIImage *) image;
 -(UIImage *) mean: (UIImage *) image;
+-(UIImage *) threshold: (UIImage *) image;
 @end

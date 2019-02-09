@@ -27,4 +27,13 @@
     mat.setTo(scalar);
     return MatToUIImage(mat);
 }
+-(UIImage *) threshold: (UIImage *) image {
+    cv::Mat grayImage;
+    cv::Mat thresholdImage;
+    UIImageToMat(image, grayImage);
+    cv::cvtColor(grayImage, grayImage, CV_BGR2GRAY);
+    cv::threshold(grayImage, thresholdImage, 60, 255, cv::THRESH_BINARY);
+    cv::cvtColor(thresholdImage, thresholdImage, cv::COLOR_GRAY2RGB);
+    return MatToUIImage(thresholdImage);
+}
 @end
