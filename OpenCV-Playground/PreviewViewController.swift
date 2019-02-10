@@ -18,10 +18,14 @@ class PreviewViewController: UIViewController {
     }
 
     @IBOutlet weak var previewImageView: UIImageView!
+    @IBOutlet weak var hueSlider: GradientSlider!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         preview = originalImage
+        hueSlider.actionBlock = { slider, newValue, finished in
+            self.preview = self.openCV.extractColor(Int(newValue * 180), from: self.originalImage)
+        }
     }
 
     @IBAction func mean(_ sender: UIButton) {

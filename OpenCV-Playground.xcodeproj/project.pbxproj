@@ -18,6 +18,7 @@
 		687166A82201F4D600289D69 /* Preview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687166A72201F4D600289D69 /* Preview.storyboard */; };
 		687166AA2201FA7600289D69 /* AppRootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687166A92201FA7600289D69 /* AppRootController.swift */; };
 		687166AC2201FABA00289D69 /* AppRoot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687166AB2201FABA00289D69 /* AppRoot.storyboard */; };
+		68A8BBFA221054B80043C51C /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8BBF9221054B80043C51C /* GradientSlider.swift */; };
 		9240086691A97AE0FD365830 /* Pods_OpenCV_Playground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A358342CBC48460D2D9A4917 /* Pods_OpenCV_Playground.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		687166A72201F4D600289D69 /* Preview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preview.storyboard; sourceTree = "<group>"; };
 		687166A92201FA7600289D69 /* AppRootController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootController.swift; sourceTree = "<group>"; };
 		687166AB2201FABA00289D69 /* AppRoot.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AppRoot.storyboard; sourceTree = "<group>"; };
+		68A8BBF9221054B80043C51C /* GradientSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientSlider.swift; sourceTree = "<group>"; };
 		82D24E5B0CA1C650AD4736D3 /* Pods-OpenCV-Playground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenCV-Playground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenCV-Playground/Pods-OpenCV-Playground.debug.xcconfig"; sourceTree = "<group>"; };
 		A358342CBC48460D2D9A4917 /* Pods_OpenCV_Playground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenCV_Playground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -77,6 +79,7 @@
 			children = (
 				687166A52201F47D00289D69 /* R.generated.swift */,
 				686BFA5C220021BB00F494F4 /* OpenCVWrappers */,
+				68A8BBF8221054830043C51C /* Views */,
 				686BFA2522000C1900F494F4 /* AppDelegate.swift */,
 				687166A92201FA7600289D69 /* AppRootController.swift */,
 				686BFA2722000C1900F494F4 /* MainViewController.swift */,
@@ -99,6 +102,14 @@
 				686BFA5D2200221100F494F4 /* OpenCV-Playground-Bridging-Header.h */,
 			);
 			path = OpenCVWrappers;
+			sourceTree = "<group>";
+		};
+		68A8BBF8221054830043C51C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				68A8BBF9221054B80043C51C /* GradientSlider.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		8A58436A7A8ABA71644D53C0 /* Frameworks */ = {
@@ -267,6 +278,7 @@
 				686BFA602200221100F494F4 /* OpenCVWrapper.mm in Sources */,
 				687166A32201F1CE00289D69 /* PreviewViewController.swift in Sources */,
 				687166AA2201FA7600289D69 /* AppRootController.swift in Sources */,
+				68A8BBFA221054B80043C51C /* GradientSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,7 +14,7 @@
 -(NSString *)openCVVersionString {
     return [NSString stringWithFormat: @"OpenCV Version %s", CV_VERSION];
 }
--(UIImage *)convertToGrayScaleFrom:(UIImage*)image {
+-(UIImage *)convertToGrayScaleFrom:(UIImage *)image {
     cv::Mat convertedImage;
     UIImageToMat(image, convertedImage);
     cv::cvtColor(convertedImage, convertedImage, CV_BGR2GRAY);
@@ -35,5 +35,25 @@
     cv::threshold(grayImage, thresholdImage, thresh, 255, cv::THRESH_BINARY);
     cv::cvtColor(thresholdImage, thresholdImage, cv::COLOR_GRAY2RGB);
     return MatToUIImage(thresholdImage);
+}
+
+-(UIImage *)extractColor:(NSInteger)hue fromImage:(UIImage *)image {
+    int H_MIN = (int) hue - 10;
+    int H_MAX = (int) hue + 10;
+    int S_MIN = 100;
+    int S_MAX = 255;
+    int V_MIN = 100;
+    int V_MAX = 255;
+
+    cv::Mat originalImage, hsvImage, maskImage, maskedImage;
+    UIImageToMat(image, originalImage);
+    cv::cvtColor(originalImage, hsvImage, cv::COLOR_RGB2HSV);
+
+    cv::Scalar lower = cv::Scalar(H_MIN, S_MIN, V_MIN);
+    cv::Scalar upper = cv::Scalar(H_MAX, S_MAX, V_MAX);
+    cv::inRange(hsvImage, lower, upper, maskImage);
+    originalImage.copyTo(maskedImage, maskImage);
+
+    return MatToUIImage(maskedImage);
 }
 @end
