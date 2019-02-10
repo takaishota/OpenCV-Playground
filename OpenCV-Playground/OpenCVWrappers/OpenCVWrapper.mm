@@ -17,7 +17,7 @@
 -(UIImage *)convertToGrayScaleFrom:(UIImage *)image {
     cv::Mat convertedImage;
     UIImageToMat(image, convertedImage);
-    cv::cvtColor(convertedImage, convertedImage, CV_BGR2GRAY);
+    cv::cvtColor(convertedImage, convertedImage, cv::COLOR_RGB2GRAY);
     return MatToUIImage(convertedImage);
 }
 -(UIImage *)meanFrom:(UIImage *)image {
@@ -31,7 +31,7 @@
     cv::Mat grayImage;
     cv::Mat thresholdImage;
     UIImageToMat(image, grayImage);
-    cv::cvtColor(grayImage, grayImage, CV_BGR2GRAY);
+    cv::cvtColor(grayImage, grayImage, cv::COLOR_RGB2GRAY);
     cv::threshold(grayImage, thresholdImage, thresh, 255, cv::THRESH_BINARY);
     cv::cvtColor(thresholdImage, thresholdImage, cv::COLOR_GRAY2RGB);
     return MatToUIImage(thresholdImage);
