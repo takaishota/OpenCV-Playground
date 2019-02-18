@@ -19,12 +19,16 @@ class PreviewViewController: UIViewController {
 
     @IBOutlet weak var previewImageView: UIImageView!
     @IBOutlet weak var hueSlider: GradientSlider!
+    @IBOutlet weak var removeHueSlider: GradientSlider!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         preview = originalImage
         hueSlider.actionBlock = { slider, newValue, finished in
             self.preview = self.openCV.extractColor(Int(newValue * 180), from: self.originalImage)
+        }
+        removeHueSlider.actionBlock = { slider, newValue, finished in
+            self.preview = self.openCV.removeColor(Int(newValue * 180), from: self.originalImage)
         }
     }
 

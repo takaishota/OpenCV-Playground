@@ -15,4 +15,5 @@
 -(UIImage *)meanFrom:(UIImage *)image;
 -(UIImage *)thresholdFrom:(UIImage *)image withThresh:(NSInteger)thresh;
 -(UIImage *)extractColor:(NSInteger)hue fromImage:(UIImage *)image;
+-(UIImage *)removeColor:(NSInteger)hue fromImage:(UIImage *)image;
 @end
