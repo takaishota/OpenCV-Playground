@@ -58,14 +58,14 @@
 }
 
 -(UIImage *)removeColor:(NSInteger)hue fromImage:(UIImage *)image {
-    int H_MIN = (int) hue - 10;
-    int H_MAX = (int) hue + 10;
-    int S_MIN = 100;
+    int H_MIN = (int) hue - 20;
+    int H_MAX = (int) hue + 20;
+    int S_MIN = 50;
     int S_MAX = 255;
-    int V_MIN = 100;
+    int V_MIN = 50;
     int V_MAX = 255;
 
-    cv::Mat originalImage, hsvImage, maskInverse, mask, maskRGB, maskedImage, maskWhite, maskedReplaceWhite;
+    cv::Mat originalImage, hsvImage, maskInverse, mask, maskRGB, maskedImage;
     UIImageToMat(image, originalImage);
     cv::cvtColor(originalImage, hsvImage, cv::COLOR_RGB2HSV);
     
@@ -74,12 +74,8 @@
     cv::inRange(hsvImage, lower, upper, maskInverse);
 
     cv::bitwise_not(maskInverse, mask);
-    cv::cvtColor(mask, maskRGB, cv::COLOR_GRAY2RGB);
-    cv::bitwise_and(originalImage, maskRGB, maskedImage);
+    cv::bitwise_and(originalImage, originalImage, maskedImage, mask);
 
-    cv::cvtColor(maskInverse, maskWhite, cv::COLOR_GRAY2RGB);
-    cv::addWeighted(maskedImage, 1, maskWhite, 1, 0, maskedReplaceWhite);
-
-    return MatToUIImage(maskedReplaceWhite);
+    return MatToUIImage(maskedImage);
 }
 @end
