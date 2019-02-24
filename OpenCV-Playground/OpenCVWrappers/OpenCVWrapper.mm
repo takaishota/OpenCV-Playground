@@ -78,4 +78,13 @@
 
     return MatToUIImage(maskedImage);
 }
+-(UIImage *)blur:(UIImage *)image withSize:(NSInteger)size; {
+    if (size == 0) { return image; }
+    
+    cv::Mat convertedImage;
+    UIImageToMat(image, convertedImage);
+    int odd = size % 2 == 1 ? int(size) : int(size - 1) ;
+    cv::GaussianBlur(convertedImage, convertedImage, cv::Size(odd, odd), 0);
+    return MatToUIImage(convertedImage);
+}
 @end

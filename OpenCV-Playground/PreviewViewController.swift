@@ -44,6 +44,10 @@ class PreviewViewController: UIViewController {
         preview = openCV.threshold(from: originalImage, withThresh: Int(sender.value))
     }
 
+    @IBAction func blurSizeChanged(_ sender: UISlider) {
+        preview = openCV.blur(originalImage, withSize: Int(sender.value))
+    }
+
     @IBAction func setOriginal(_ sender: UIButton) {
         preview = originalImage
     }
