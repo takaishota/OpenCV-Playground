@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D7430BD222D70C100EEEC95 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D7430BC222D70C000EEEC95 /* Menu.storyboard */; };
+		3D7430C1222D716600EEEC95 /* MenuViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7430C0222D716600EEEC95 /* MenuViewControllers.swift */; };
 		686BFA2622000C1900F494F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686BFA2522000C1900F494F4 /* AppDelegate.swift */; };
 		686BFA2822000C1900F494F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686BFA2722000C1900F494F4 /* MainViewController.swift */; };
 		686BFA2B22000C1900F494F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686BFA2922000C1900F494F4 /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		3191FF046A71B871DBA20630 /* Pods-OpenCV-Playground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenCV-Playground.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenCV-Playground/Pods-OpenCV-Playground.release.xcconfig"; sourceTree = "<group>"; };
+		3D7430BC222D70C000EEEC95 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		3D7430C0222D716600EEEC95 /* MenuViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewControllers.swift; sourceTree = "<group>"; };
 		686BFA2222000C1900F494F4 /* OpenCV-Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenCV-Playground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		686BFA2522000C1900F494F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		686BFA2722000C1900F494F4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +60,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D7430BE222D70E200EEEC95 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				687166A92201FA7600289D69 /* AppRootController.swift */,
+				686BFA2722000C1900F494F4 /* MainViewController.swift */,
+				687166A22201F1CE00289D69 /* PreviewViewController.swift */,
+				3D7430C0222D716600EEEC95 /* MenuViewControllers.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3D7430BF222D70F800EEEC95 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				687166A72201F4D600289D69 /* Preview.storyboard */,
+				3D7430BC222D70C000EEEC95 /* Menu.storyboard */,
+				686BFA2922000C1900F494F4 /* Main.storyboard */,
+				687166AB2201FABA00289D69 /* AppRoot.storyboard */,
+				686BFA2E22000C1A00F494F4 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		686BFA1922000C1900F494F4 = {
 			isa = PBXGroup;
 			children = (
@@ -78,17 +105,12 @@
 			isa = PBXGroup;
 			children = (
 				687166A52201F47D00289D69 /* R.generated.swift */,
-				686BFA5C220021BB00F494F4 /* OpenCVWrappers */,
-				68A8BBF8221054830043C51C /* Views */,
 				686BFA2522000C1900F494F4 /* AppDelegate.swift */,
-				687166A92201FA7600289D69 /* AppRootController.swift */,
-				686BFA2722000C1900F494F4 /* MainViewController.swift */,
-				687166A22201F1CE00289D69 /* PreviewViewController.swift */,
-				687166A72201F4D600289D69 /* Preview.storyboard */,
-				686BFA2922000C1900F494F4 /* Main.storyboard */,
-				687166AB2201FABA00289D69 /* AppRoot.storyboard */,
+				686BFA5C220021BB00F494F4 /* OpenCVWrappers */,
+				3D7430BF222D70F800EEEC95 /* Storyboards */,
+				3D7430BE222D70E200EEEC95 /* ViewControllers */,
+				68A8BBF8221054830043C51C /* Views */,
 				686BFA2C22000C1A00F494F4 /* Assets.xcassets */,
-				686BFA2E22000C1A00F494F4 /* LaunchScreen.storyboard */,
 				686BFA3122000C1A00F494F4 /* Info.plist */,
 			);
 			path = "OpenCV-Playground";
@@ -194,6 +216,7 @@
 				686BFA3022000C1A00F494F4 /* LaunchScreen.storyboard in Resources */,
 				687166AC2201FABA00289D69 /* AppRoot.storyboard in Resources */,
 				686BFA2D22000C1A00F494F4 /* Assets.xcassets in Resources */,
+				3D7430BD222D70C100EEEC95 /* Menu.storyboard in Resources */,
 				687166A82201F4D600289D69 /* Preview.storyboard in Resources */,
 				686BFA2B22000C1900F494F4 /* Main.storyboard in Resources */,
 			);
@@ -251,7 +274,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-OpenCV-Playground/Pods-OpenCV-Playground-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-OpenCV-Playground/Pods-OpenCV-Playground-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -262,7 +285,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenCV-Playground/Pods-OpenCV-Playground-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OpenCV-Playground/Pods-OpenCV-Playground-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -275,6 +298,7 @@
 				686BFA2822000C1900F494F4 /* MainViewController.swift in Sources */,
 				686BFA2622000C1900F494F4 /* AppDelegate.swift in Sources */,
 				687166A62201F47D00289D69 /* R.generated.swift in Sources */,
+				3D7430C1222D716600EEEC95 /* MenuViewControllers.swift in Sources */,
 				686BFA602200221100F494F4 /* OpenCVWrapper.mm in Sources */,
 				687166A32201F1CE00289D69 /* PreviewViewController.swift in Sources */,
 				687166AA2201FA7600289D69 /* AppRootController.swift in Sources */,

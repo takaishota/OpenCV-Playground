@@ -9,7 +9,7 @@ DEPENDENCIES:
   - R.swift
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/cocoapods/specs:
     - OpenCV
     - R.swift
     - R.swift.Library
@@ -21,4 +21,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 66a48fe9e8f13a6182565287a5913099c9f8f284
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1
